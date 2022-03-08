@@ -20,9 +20,10 @@ public class Empresa implements Serializable{
 	private ArrayList<Empleado> plantilla_emple;
 	private ArrayList<Oficina> lista_oficinas;
 	private ArrayList<Vehiculo> lista_vehiculos;
+	private ArrayList<Alquiler> lista_alquileres;
 	
 	public Empresa(String nom_empresa, ArrayList<Cliente> lista_clientes, ArrayList<Empleado> plantilla_emple,
-			ArrayList<Oficina> lista_oficinas, ArrayList<Vehiculo> lista_vehiculos) {
+			ArrayList<Oficina> lista_oficinas, ArrayList<Vehiculo> lista_vehiculos, ArrayList<Alquiler> lista_alquileres) {
 		super();
 		this.nom_empresa = nom_empresa;
 		this.lista_clientes = lista_clientes;
@@ -37,6 +38,7 @@ public class Empresa implements Serializable{
 		plantilla_emple = new ArrayList<Empleado>();
 		lista_oficinas = new ArrayList<Oficina>();
 		lista_vehiculos = new ArrayList<Vehiculo>();
+		lista_alquileres = new ArrayList<Alquiler>();
 	}
 	
 	public String getNom_empresa() {
