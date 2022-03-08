@@ -64,7 +64,7 @@ public class menu_principal {
 			 * LISTA TODOS LOS ALQUILERES
 			 */
 			//LISTAR DATOS DE ALQUILERES
-			interfaz.continuarPregunta();
+			interfaz.mostrar_lista_alquileres();
 			break;
 		case 2:
 			/**

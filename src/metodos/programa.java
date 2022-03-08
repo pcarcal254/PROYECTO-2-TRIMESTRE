@@ -359,6 +359,7 @@ public class programa {
 		double precio_total = calcula_precio_alquiler(tipo_vehiculo, porcentaje_categoria, cod_ofi_dev, aeropuerto_ofi, f_inicio, f_fin);
 		Alquiler alq = new Alquiler(matricula, nom_emple, tarjeta_cliente, f_inicio, f_fin, cod_ofi_dev, porcentaje_categoria, tipo_vehiculo, precio_total);
 		main.nuestra_empresa.anade_alquiler(alq);
+		interfaz.alquiler_realizado();
 	}
 	
 	public static double calcula_precio_alquiler(String tipo_vehiculo, int porcentaje_categoria, String cod_ofi_dev, boolean aeropuerto_ofi, GregorianCalendar f_inicio, GregorianCalendar f_fin) {
@@ -384,5 +385,23 @@ public class programa {
 	public static int daysBetween(Date d1, Date d2) {
 	    return (int) ((d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
 	  }
+
+	public static void devolver_vehiculo() {
+		int num_total_alquileres = alquileres.size();
+		interfaz.muestra_titulo_alquileres_anadidos(num_total_alquileres);
+		String matricula = interfaz.muestra_pedir_matricula_alquiler();
+		
+		int contador = 0;
+		for (Alquiler alq : alquileres) {
+			if (alq.getMatricula().equalsIgnoreCase(matricula)) {
+				alquileres.remove(contador);
+				interfaz.mostrar_alquiler_devuelto(matricula);
+			}
+			contador++;
+		}
+		if (contador == (num_total_alquileres-1)){
+			interfaz.error_encontrar_alquiler(matricula);
+		}
+	}
 	
 }

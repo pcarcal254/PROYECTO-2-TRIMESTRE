@@ -3,6 +3,7 @@ package metodos;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import clases.Alquiler;
 import clases.Cliente;
 import clases.Empresa;
 import clases.Oficina;
@@ -60,7 +61,7 @@ public class interfaz {
 	}
 
 	public static String muestra_pedir_matricula_vehiculo() {		
-		System.out.println("INTRODUCE LA MÁTRICULA DEL COCHE A MODIFICAR");
+		System.out.println("INTRODUCE LA MÁTRICULA DEL VEHICULO A MODIFICAR");
 		String matricula_a_buscar;
 		matricula_a_buscar = leer.nextLine();
 		return matricula_a_buscar;
@@ -224,12 +225,43 @@ public class interfaz {
 			o.fichaOficina();
 		}
 	}
+	
+	public static void alquiler_realizado() {
+		System.out.println("SU ALQUILER SE HA COMPLETADO CORRECTAMENTE");
+	}
+	
+	public static void muestra_titulo_alquileres_anadidos(int num_total) {
+		String texto = "BUSCANDO EN UN TOTAL DE "+num_total+" DE ALQUILERES";
+		System.out.println(texto);
+		subrayaTexto(texto.length(),"*");
+	}
 
 	public static void pinta_raya() {
 		for (int i=0; i<100; i++) {
 			System.out.print("*");
 		}
 		System.out.println();
+	}
+
+	public static String muestra_pedir_matricula_alquiler() {
+		System.out.println("INTRODUCE LA MÁTRICULA DEL VEHICULO A DEVOLVER");
+		String matricula_a_buscar;
+		matricula_a_buscar = leer.nextLine();
+		return matricula_a_buscar;
+	}
+
+	public static void mostrar_alquiler_devuelto(String matricula) {
+		System.out.println("EL VEHICULO CON MATRICULA "+matricula+" HA SIDO DEVUELTO CON EXITO");
+	}
+
+	public static void error_encontrar_alquiler(String matricula) {
+		System.out.println("LA MATRICULA INTRODUCIDA "+matricula+" NO HA SIDO ENCONTRADA EN NUESTRA BASE DE DATOS DE ALQUILERES");
+	}
+
+	public static void mostrar_lista_alquileres() {
+		for (Alquiler alq : main.nuestra_empresa.getLista_alquileres()){
+			alq.fichaAlquiler();
+		}
 	}
 	
 }

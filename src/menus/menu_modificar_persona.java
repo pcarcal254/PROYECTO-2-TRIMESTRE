@@ -45,7 +45,7 @@ public class menu_modificar_persona {
 			indice.add(""+(i+1));
 		}
 		
-		while (posicion != total_opciones) {
+		while (posicion != total_opciones-1) {
 //			interfaz.mostrarOpcionesMenu(opcionesvalidas, indice);
 //			posicion = comprobarOpcion (indice, interfaz.pedirOpcionMenu());
 			posicion = leer_comprobar_opcion.leer_comprobar_opcion_menu(opcionesvalidas, indice);

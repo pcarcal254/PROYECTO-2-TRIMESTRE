@@ -38,9 +38,10 @@ public class generales {
 	}
 	
 	public static boolean valida_emisiones(String opcion) {
-		String cadena = "ABC";
 		boolean validado;
-		if (opcion.indexOf(cadena) > 0) {
+		if (opcion.equalsIgnoreCase("a") ||
+			opcion.equalsIgnoreCase("b") ||
+			opcion.equalsIgnoreCase("c")) {
 			validado = true;
 		} else {
 			validado = false;
@@ -49,9 +50,10 @@ public class generales {
 	}
 
 	public static boolean valida_carnet(String opcion) {
-		String cadena = "ABC";
 		boolean validado;
-		if (opcion.indexOf(cadena) > 0) {
+		if (opcion.equalsIgnoreCase("a") ||
+			opcion.equalsIgnoreCase("b") ||
+			opcion.equalsIgnoreCase("c")) {
 			validado = true;
 		} else {
 			validado = false;

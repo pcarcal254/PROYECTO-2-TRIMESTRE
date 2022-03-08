@@ -74,7 +74,7 @@ public class menu_gestion {
 			break;
 		case 5:
 			//DEVOLUCION VEHICULO
-			interfaz.continuarPregunta();
+			programa.devolver_vehiculo();
 			break;
 		case 6:
 			//VOLVER
