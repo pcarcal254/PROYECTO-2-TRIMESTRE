@@ -153,7 +153,6 @@ public class pedir_datos_vehiculo {
 		return plazas;
 	}
 	
-	//TO DO TIPO COCHECONV
 	public static String pedir_tip() {
 		String tipo="";
 		boolean validado = false;

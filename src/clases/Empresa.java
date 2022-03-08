@@ -93,6 +93,14 @@ public class Empresa implements Serializable{
 		lista_oficinas.add(o);
 	}
 	
+	public ArrayList<Alquiler> getLista_alquileres() {
+		return lista_alquileres;
+	}
+	
+	public void anade_alquiler(Alquiler a) {
+		lista_alquileres.add(a);
+	}
+
 	public static Empresa leer_crear_empresa(boolean primera_vez) {
 		if (!primera_vez) {
 			Empresa nueva_empresa = programa.crear_empresa();

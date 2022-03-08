@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import clases.Empresa;
 import metodos.interfaz;
+import metodos.programa;
 
 public class menu_gestion {
 	
@@ -15,8 +16,8 @@ public class menu_gestion {
 		opcionesvalidas.add("GESTION CLIENTES"); //HECHO COMPLETO
 		opcionesvalidas.add("GESTION EMPLEADOS"); //HECHO COMPLETO
 		opcionesvalidas.add("GESTION OFICINAS"); //HECHO COMPLETO
-		opcionesvalidas.add("ALQUILAR VEHICULO");
-		opcionesvalidas.add("DEVOLUCION VEHICULO");
+		opcionesvalidas.add("ALQUILAR VEHICULO"); //POR HACER
+		opcionesvalidas.add("DEVOLUCION VEHICULO"); //POR HACER
 		opcionesvalidas.add("VOLVER");
 		
 		ArrayList<String> indice = new ArrayList<String>();
@@ -69,7 +70,7 @@ public class menu_gestion {
 			break;
 		case 4:
 			//ALQUILAR VEHICULO
-			interfaz.continuarPregunta();
+			programa.registrar_alquiler();
 			break;
 		case 5:
 			//DEVOLUCION VEHICULO

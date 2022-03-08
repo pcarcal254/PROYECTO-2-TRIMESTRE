@@ -9,7 +9,10 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
+import java.util.Calendar;
+import java.util.Date;
 
+import clases.Alquiler;
 import clases.Categoria;
 import clases.Cliente;
 import clases.CocheConv;
@@ -34,6 +37,7 @@ public class programa {
 	private static ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 	private static ArrayList<Empleado> empleados = new ArrayList<Empleado>();
 	private static ArrayList<Oficina> oficinas = new ArrayList<Oficina>();
+	private static ArrayList<Alquiler> alquileres = new ArrayList<Alquiler>();
 	
 	//COMPROBACION EMPRESA CREADA
 	public static boolean comprobacion_fichero() {
@@ -83,6 +87,7 @@ public class programa {
 		clientes = nueva_empresa.getLista_clientes();
 		empleados = nueva_empresa.getPlantilla_emple();
 		oficinas = nueva_empresa.getLista_oficinas();
+		alquileres = nueva_empresa.getLista_alquileres();
 	}
 	
 	//EMPRESA
@@ -340,6 +345,44 @@ public class programa {
 			interfaz.error_encontrar_oficina(cod_ofi);
 		}
 	}
+
+	public static void registrar_alquiler() {
+		String matricula = pedir_datos_alquiler.pedir_matricula_alquiler(vehiculos);
+		String nom_emple = pedir_datos_alquiler.pedir_nom_emple_alquiler(empleados);
+		String tarjeta_cliente = pedir_datos_alquiler.pedir_tarjeta_cliente_alquiler(clientes);
+		GregorianCalendar f_inicio = pedir_datos_alquiler.pedir_f_inicio_alquiler();
+		GregorianCalendar f_fin = pedir_datos_alquiler.pedir_f_fin_alquiler();
+		String cod_ofi_dev = pedir_datos_alquiler.pedir_cod_ofi_dev_alquiler(oficinas); 
+		boolean aeropuerto_ofi = pedir_datos_alquiler.obtener_oficina_aeropuerto(oficinas,cod_ofi_dev);
+		int porcentaje_categoria = pedir_datos_alquiler.obtener_categoria_vehiculo(vehiculos,matricula);
+		String tipo_vehiculo = pedir_datos_alquiler.obtener_tipo_vehiculo(vehiculos,matricula);
+		double precio_total = calcula_precio_alquiler(tipo_vehiculo, porcentaje_categoria, cod_ofi_dev, aeropuerto_ofi, f_inicio, f_fin);
+		Alquiler alq = new Alquiler(matricula, nom_emple, tarjeta_cliente, f_inicio, f_fin, cod_ofi_dev, porcentaje_categoria, tipo_vehiculo, precio_total);
+		main.nuestra_empresa.anade_alquiler(alq);
+	}
 	
+	public static double calcula_precio_alquiler(String tipo_vehiculo, int porcentaje_categoria, String cod_ofi_dev, boolean aeropuerto_ofi, GregorianCalendar f_inicio, GregorianCalendar f_fin) {
+		double precio=0;
+		int dias_totales = daysBetween(f_inicio.getTime(), f_fin.getTime());
+		double precio_dias_totales = 0;
+		if (tipo_vehiculo.equalsIgnoreCase("moto")) {
+			precio_dias_totales = (10*dias_totales)+((10*dias_totales)*0.15);
+		} else if (tipo_vehiculo.equalsIgnoreCase("cocheelec")) {
+			precio_dias_totales = (50*dias_totales)+((10*dias_totales)*0.15);
+		} else if (tipo_vehiculo.equalsIgnoreCase("furgoneta")) {
+			precio_dias_totales = (70*dias_totales);
+		} else if (tipo_vehiculo.equalsIgnoreCase("cocheconv")) {
+			precio_dias_totales = (50*dias_totales);
+		}
+		precio = precio_dias_totales + (precio_dias_totales*(porcentaje_categoria/100));
+		if (aeropuerto_ofi) {
+			precio = precio + (precio*0.1);
+		}
+		return precio;
+	}
+	
+	public static int daysBetween(Date d1, Date d2) {
+	    return (int) ((d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
+	  }
 	
 }

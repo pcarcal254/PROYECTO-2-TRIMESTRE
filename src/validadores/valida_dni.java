@@ -2,6 +2,12 @@ package validadores;
 
 public class valida_dni {
 
+	/**
+	 * COMPRUEBA SI UN DNI PASADO EN FORMATO STRING ES VALIDO
+	 * EN ESPAÑA
+	 * @param dni -> PASADO EN STRING
+	 * @return TRUE -> SI ES VALIDO || FALSE -> SI NO ES VALIDO
+	 */
 	public static boolean validarDNI(String dni) {
 			
 			boolean validado = false;
