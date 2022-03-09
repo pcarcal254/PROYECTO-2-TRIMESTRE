@@ -362,7 +362,10 @@ public class programa {
 		} else {
 			System.out.println("ESTE VEHICULO YA HA SIDO ALQUILADO, LO SENTIMOS MUCHO");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 		}
 	}
 	
