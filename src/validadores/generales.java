@@ -12,7 +12,6 @@ import clases.Vehiculo;
 import menus.menu_modificar_persona;
 import metodos.interfaz;
 
->>>>>>> Stashed changes
 public class generales {
 	
 	public static boolean valida_cod_categoria(String opcion) {
@@ -87,8 +86,6 @@ public class generales {
 		return validado;
 	}
 
-<<<<<<< Updated upstream
-=======
 	public static boolean valida_matricula(ArrayList<Vehiculo> vehiculos, String matricula) {
 		boolean dato_valido = false;
 		for (Vehiculo v : vehiculos) {
@@ -144,5 +141,4 @@ public class generales {
 		return dato_valido;
 	}
 
->>>>>>> Stashed changes
 }
