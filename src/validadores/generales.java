@@ -1,7 +1,5 @@
 package validadores;
 
-<<<<<<< Updated upstream
-=======
 import java.util.ArrayList;
 
 import clases.Alquiler;
