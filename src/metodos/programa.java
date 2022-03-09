@@ -361,6 +361,28 @@ public class programa {
 			interfaz.alquiler_realizado();
 		} else {
 			System.out.println("ESTE VEHICULO YA HA SIDO ALQUILADO, LO SENTIMOS MUCHO");
+<<<<<<< Updated upstream
+=======
+		}
+	}
+	
+	public static double calcula_precio_alquiler(String tipo_vehiculo, int porcentaje_categoria, String cod_ofi_dev, boolean aeropuerto_ofi, GregorianCalendar f_inicio, GregorianCalendar f_fin) {
+		double precio=0;
+		int dias_totales = daysBetween(f_inicio.getTime(), f_fin.getTime());
+		double precio_dias_totales = 0;
+		if (tipo_vehiculo.equalsIgnoreCase("moto")) {
+			precio_dias_totales = (10*dias_totales)+((10*dias_totales)*0.15);
+		} else if (tipo_vehiculo.equalsIgnoreCase("cocheelec")) {
+			precio_dias_totales = (50*dias_totales)+((10*dias_totales)*0.15);
+		} else if (tipo_vehiculo.equalsIgnoreCase("furgoneta")) {
+			precio_dias_totales = (70*dias_totales);
+		} else if (tipo_vehiculo.equalsIgnoreCase("cocheconv")) {
+			precio_dias_totales = (50*dias_totales);
+		}
+		precio = precio_dias_totales + (precio_dias_totales*(porcentaje_categoria/100));
+		if (aeropuerto_ofi) {
+			precio = precio + (precio*0.1);
+>>>>>>> Stashed changes
 		}
 	}
 >>>>>>> Stashed changes
