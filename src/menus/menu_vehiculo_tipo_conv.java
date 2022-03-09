@@ -48,13 +48,11 @@ public class menu_vehiculo_tipo_conv {
 			//COCHE
 			programa.nuevo_coche_conv();
 			interfaz.vehiculo_creado();
-			interfaz.continuarPregunta();
 			break;
 		case 1:
 			//FURGONETA
 			programa.nuevo_furgoneta_conv();
 			interfaz.vehiculo_creado();
-			interfaz.continuarPregunta();
 			break;
 		case 2:
 			//VOLVER

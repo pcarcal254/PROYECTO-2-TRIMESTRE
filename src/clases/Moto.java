@@ -2,6 +2,8 @@ package clases;
 
 import java.io.Serializable;
 
+import metodos.interfaz;
+
 public class Moto extends Electrico implements Serializable{
 	private static final long serialVersionUID = 10;
 	/*
@@ -45,6 +47,7 @@ public class Moto extends Electrico implements Serializable{
 		super.fichaVehiculo();
 		System.out.println("ES UNA MOTO DE "+this.cilindrada
 				+" CILINDRADAS Y REQUIERE DE UN CARNET DE TIPO "+this.carnet_req);
+		interfaz.pinta_raya();
 	}
 	
 }

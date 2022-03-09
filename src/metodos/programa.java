@@ -25,6 +25,7 @@ import clases.Vehiculo;
 import main.main;
 import menus.menu_gestion;
 import menus.menu_modificar_persona;
+import validadores.generales;
 
 public class programa {
 	
@@ -340,6 +341,29 @@ public class programa {
 			interfaz.error_encontrar_oficina(cod_ofi);
 		}
 	}
+<<<<<<< Updated upstream
+=======
+
+	public static void registrar_alquiler() {
+		String matricula = pedir_datos_alquiler.pedir_matricula_alquiler(vehiculos);
+		if (!generales.valida_vehiculo_ya_alquilado(alquileres,matricula)) {
+			String nom_emple = pedir_datos_alquiler.pedir_nom_emple_alquiler(empleados);
+			String tarjeta_cliente = pedir_datos_alquiler.pedir_tarjeta_cliente_alquiler(clientes);
+			GregorianCalendar f_inicio = pedir_datos_alquiler.pedir_f_inicio_alquiler();
+			GregorianCalendar f_fin = pedir_datos_alquiler.pedir_f_fin_alquiler();
+			String cod_ofi_dev = pedir_datos_alquiler.pedir_cod_ofi_dev_alquiler(oficinas); 
+			boolean aeropuerto_ofi = pedir_datos_alquiler.obtener_oficina_aeropuerto(oficinas,cod_ofi_dev);
+			int porcentaje_categoria = pedir_datos_alquiler.obtener_categoria_vehiculo(vehiculos,matricula);
+			String tipo_vehiculo = pedir_datos_alquiler.obtener_tipo_vehiculo(vehiculos,matricula);
+			double precio_total = calcula_precio_alquiler(tipo_vehiculo, porcentaje_categoria, cod_ofi_dev, aeropuerto_ofi, f_inicio, f_fin);
+			Alquiler alq = new Alquiler(matricula, nom_emple, tarjeta_cliente, f_inicio, f_fin, cod_ofi_dev, porcentaje_categoria, tipo_vehiculo, precio_total);
+			main.nuestra_empresa.anade_alquiler(alq);
+			interfaz.alquiler_realizado();
+		} else {
+			System.out.println("ESTE VEHICULO YA HA SIDO ALQUILADO, LO SENTIMOS MUCHO");
+		}
+	}
+>>>>>>> Stashed changes
 	
 	
 }

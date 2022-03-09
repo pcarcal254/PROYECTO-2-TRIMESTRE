@@ -3,6 +3,8 @@ package clases;
 import java.io.Serializable;
 import java.util.GregorianCalendar;
 
+import metodos.interfaz;
+
 public class Vehiculo implements Serializable{
 	private static final long serialVersionUID = 4;
 	
@@ -24,6 +26,17 @@ public class Vehiculo implements Serializable{
 	private Categoria categoria;
 	private String ubi_nom_ofi;
 	
+	/**
+	 * CREA UN VEHICULO
+	 * @param matricula -> MATRICULA DEL VEHICULO
+	 * @param marca -> MARCA DEL VEHICULO
+	 * @param modelo -> MODELO DEL VEHICULO
+	 * @param color -> COLOR DEL VEHICULO
+	 * @param f_alta_vehi -> FECHA EN LA QUE EL VEHICULO SE DA DEL ALTA
+	 * @param kms -> KMS DEL VEHICULO
+	 * @param categoria -> CATEGORIA DEL VEHICULO
+	 * @param ubi_nom_ofi -> UBICACION DONDE SE ENCUENTRA DEL VEHICULO
+	 */
 	public Vehiculo(String matricula, String marca, String modelo, String color, GregorianCalendar f_alta_vehi,
 			 int kms, Categoria categoria, String ubi_nom_ofi) {
 		super();
@@ -118,6 +131,7 @@ public class Vehiculo implements Serializable{
 	}
 	
 	public void fichaVehiculo() {
+		interfaz.pinta_raya();
 		System.out.println("VEHICULO CON MATRICULA: "+this.matricula+" MARCA: "+this.marca+" SE ENCUENTRA EN LA OFICINA: "+this.ubi_nom_ofi);
 	}
 	
