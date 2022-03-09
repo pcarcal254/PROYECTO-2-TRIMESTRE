@@ -342,8 +342,6 @@ public class programa {
 			interfaz.error_encontrar_oficina(cod_ofi);
 		}
 	}
-<<<<<<< Updated upstream
-=======
 
 	public static void registrar_alquiler() {
 		String matricula = pedir_datos_alquiler.pedir_matricula_alquiler(vehiculos);
@@ -362,8 +360,7 @@ public class programa {
 			interfaz.alquiler_realizado();
 		} else {
 			System.out.println("ESTE VEHICULO YA HA SIDO ALQUILADO, LO SENTIMOS MUCHO");
-<<<<<<< Updated upstream
-=======
+
 		}
 	}
 	
@@ -383,10 +380,10 @@ public class programa {
 		precio = precio_dias_totales + (precio_dias_totales*(porcentaje_categoria/100));
 		if (aeropuerto_ofi) {
 			precio = precio + (precio*0.1);
->>>>>>> Stashed changes
+
 		}
 	}
->>>>>>> Stashed changes
+
 	
 	
 }
