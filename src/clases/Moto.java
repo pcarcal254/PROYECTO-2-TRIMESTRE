@@ -44,7 +44,7 @@ public class Moto extends Electrico implements Serializable{
 	public void fichaVehiculo() {
 		super.fichaVehiculo();
 		System.out.println("ES UNA MOTO DE "+this.cilindrada
-				+" CILINDRADAS Y REQUIERE DE UN CARNET DE TIPO "+this.carnet_req);
+				+" CILINDRADAS Y REQUIERE DE UN CARNET DE TIPO "+this.carnet_req.toUpperCase());
 	}
 	
 }

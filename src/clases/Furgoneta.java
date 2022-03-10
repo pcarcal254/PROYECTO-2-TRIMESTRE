@@ -44,7 +44,7 @@ public class Furgoneta extends Convencional implements Serializable{
 	public void fichaVehiculo() {
 		super.fichaVehiculo();
 		System.out.println("ES UNA FURGONETA CON UNA CAPACIDAD DE CARGA DE "+this.cap_carga+
-				" Y REQUIERE DE UN CARNET DE TIPO "+this.carnet_requerido);
+				" Y REQUIERE DE UN CARNET DE TIPO "+this.carnet_requerido.toUpperCase());
 	}
 	
 }

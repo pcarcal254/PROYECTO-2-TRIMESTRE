@@ -56,7 +56,7 @@ public class Convencional extends Vehiculo implements Serializable{
 	public void fichaVehiculo() {
 		super.fichaVehiculo();
 		System.out.println("DE TIPO CONVENCIONAL CON UN CONSUMO DE "+this.litros_km+" L/KMS, UNA POTENCIA "+
-				" DE "+this.potencia+" CVS Y UN NIVEL DE EMISIONES DE "+this.lvl_emisiones);
+				" DE "+this.potencia+" CVS Y UN NIVEL DE EMISIONES DE "+this.lvl_emisiones.toUpperCase());
 	}
 	
 }

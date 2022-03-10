@@ -43,7 +43,7 @@ public class CocheElec extends Electrico implements Serializable{
 	@Override
 	public void fichaVehiculo() {
 		super.fichaVehiculo();
-		System.out.println("ES UN COCHE ELÉCTRICO DE "+this.num_plazas_elec+" NÚMERO DE PLAZAS Y DE TIPO "+this.tipo_elec);
+		System.out.println("ES UN COCHE ELÉCTRICO DE "+this.num_plazas_elec+" NÚMERO DE PLAZAS Y DE TIPO "+this.tipo_elec.toUpperCase());
 	}
 	
 }
