@@ -48,13 +48,11 @@ public class menu_vehiculo_tipo_elec {
 			//COCHE_ELECTRICO
 			programa.nuevo_coche_elec();
 			interfaz.vehiculo_creado();
-			interfaz.continuarPregunta();
 			break;
 		case 1:
 			//MOTO
 			programa.nuevo_moto_elec();
 			interfaz.vehiculo_creado();
-			interfaz.continuarPregunta();
 			break;
 		case 2:
 			//VOLVER
