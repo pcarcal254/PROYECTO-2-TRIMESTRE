@@ -3,6 +3,8 @@ package clases;
 import java.io.Serializable;
 import java.util.GregorianCalendar;
 
+import metodos.interfaz;
+
 public class Vehiculo implements Serializable{
 	private static final long serialVersionUID = 4;
 	
@@ -118,6 +120,7 @@ public class Vehiculo implements Serializable{
 	}
 	
 	public void fichaVehiculo() {
+		interfaz.pinta_raya();
 		System.out.println("VEHICULO CON MATRICULA: "+this.matricula+" MARCA: "+this.marca+" SE ENCUENTRA EN LA OFICINA: "+this.ubi_nom_ofi);
 	}
 	

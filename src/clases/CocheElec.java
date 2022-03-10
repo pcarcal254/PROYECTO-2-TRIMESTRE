@@ -2,6 +2,8 @@ package clases;
 
 import java.io.Serializable;
 
+import metodos.interfaz;
+
 public class CocheElec extends Electrico implements Serializable{
 	private static final long serialVersionUID = 11;
 	/*
@@ -44,6 +46,7 @@ public class CocheElec extends Electrico implements Serializable{
 	public void fichaVehiculo() {
 		super.fichaVehiculo();
 		System.out.println("ES UN COCHE ELÉCTRICO DE "+this.num_plazas_elec+" NÚMERO DE PLAZAS Y DE TIPO "+this.tipo_elec.toUpperCase());
+		interfaz.pinta_raya();
 	}
 	
 }

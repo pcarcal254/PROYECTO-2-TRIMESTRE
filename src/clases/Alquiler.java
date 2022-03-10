@@ -85,6 +85,8 @@ public class Alquiler implements Serializable{
 		System.out.println("EL VEHICULO CON MATRICULA "+matricula.toUpperCase()+" HA SIDO ALQUILADO EN LA FECHA "+f_inicio.toString()+" "+
 				" Y SERA DEVUELTO EN LA FECHA PREVISTA "+f_fin.toString());
 		System.out.println("HA SIDO ALQUILADO POR EL EMPLEADO "+nom_emple.toUpperCase()+" EN LA OFICINA "+cod_ofi_dev.toUpperCase());
+		System.out.println("CON UN PRECIO TOTAL DE ALQUILER DE "+precio_final+"€");
+		interfaz.pinta_raya();
 	}
 	
 }

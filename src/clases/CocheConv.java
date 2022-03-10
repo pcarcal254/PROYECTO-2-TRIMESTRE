@@ -2,6 +2,8 @@ package clases;
 
 import java.io.Serializable;
 
+import metodos.interfaz;
+
 public class CocheConv extends Convencional implements Serializable{
 	private static final long serialVersionUID = 12;
 	/*
@@ -43,6 +45,7 @@ public class CocheConv extends Convencional implements Serializable{
 	public void fichaVehiculo() {
 		super.fichaVehiculo();
 		System.out.println("ES UN COCHE CONVENCIONAL DE "+this.num_plazas_conv+" NÚMERO DE PLAZAS Y DE TIPO "+this.tipo_conv.toUpperCase());
+		interfaz.pinta_raya();
 	}
 	
 }

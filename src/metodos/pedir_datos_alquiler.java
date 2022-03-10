@@ -99,11 +99,11 @@ public class pedir_datos_alquiler {
 		boolean dato_valido = false;
 
 		while (!dato_valido) {
-			System.out.println("INTRODUCE LA TARJETA DEL CLIENTE AL QUE PERTENECE LA RESERVA");
+			System.out.println("INTRODUCE LA OFICINA DONDE SE DEVOLVERA LA RESERVA");
 			cod_ofi = leer.nextLine();
 			dato_valido = generales.valida_cod_ofi(oficinas, cod_ofi);
 			if (!dato_valido) {
-				System.out.println("EMPLEADO NO VALIDA");
+				System.out.println("OFICINA NO VALIDA");
 			}
 		}
 		return cod_ofi;
