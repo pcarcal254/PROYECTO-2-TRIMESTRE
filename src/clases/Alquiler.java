@@ -1,6 +1,7 @@
 package clases;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 import metodos.interfaz;
@@ -82,8 +83,8 @@ public class Alquiler implements Serializable{
 	
 	public void fichaAlquiler() {
 		interfaz.pinta_raya();
-		System.out.println("EL VEHICULO CON MATRICULA "+matricula.toUpperCase()+" HA SIDO ALQUILADO EN LA FECHA "+f_inicio.toString()+" "+
-				" Y SERA DEVUELTO EN LA FECHA PREVISTA "+f_fin.toString());
+		System.out.println("EL VEHICULO CON MATRICULA "+matricula.toUpperCase()+" HA SIDO ALQUILADO EN LA FECHA "+f_fin.getTime()+" "+
+				" Y SERA DEVUELTO EN LA FECHA PREVISTA "+f_fin.getTime());
 		System.out.println("HA SIDO ALQUILADO POR EL EMPLEADO "+nom_emple.toUpperCase()+" EN LA OFICINA "+cod_ofi_dev.toUpperCase());
 		System.out.println("CON UN PRECIO TOTAL DE ALQUILER DE "+precio_final+"€");
 		interfaz.pinta_raya();
