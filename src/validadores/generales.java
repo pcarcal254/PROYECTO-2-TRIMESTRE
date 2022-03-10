@@ -2,6 +2,7 @@ package validadores;
 
 import java.util.ArrayList;
 
+import clases.Alquiler;
 import clases.Cliente;
 import clases.Empleado;
 import clases.Oficina;
@@ -122,6 +123,17 @@ public class generales {
 		boolean dato_valido = false;
 		for (Oficina ofi : oficinas) {
 			if (ofi.getCod_ofi().equalsIgnoreCase(cod_ofi)) {
+				dato_valido = true;
+				break;
+			}
+		}
+		return dato_valido;
+	}
+
+	public static boolean valida_alquiler(String matricula, ArrayList<Alquiler> alquileres) {
+		boolean dato_valido = false;
+		for (Alquiler alq : alquileres) {
+			if (alq.getMatricula().equalsIgnoreCase(matricula)) {
 				dato_valido = true;
 				break;
 			}

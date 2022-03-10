@@ -263,5 +263,9 @@ public class interfaz {
 			alq.fichaAlquiler();
 		}
 	}
+
+	public static void alquiler_no_valido() {
+		System.out.println("LO SENTIMOS ESTE VEHICULO YA ESTA ALQUILADO");
+	}
 	
 }
