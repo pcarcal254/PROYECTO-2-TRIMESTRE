@@ -42,7 +42,7 @@ public class Empleado extends Persona implements Serializable{
 	@Override
 	public void fichaPersona() {
 		super.fichaPersona();
-		System.out.println("ES EMPLEADO DE LA OFICINA "+this.nom_ofi.toUpperCase()+" DADO DE ALTA EN "+this.f_alta.toString());
+		System.out.println("ES EMPLEADO DE LA OFICINA "+this.nom_ofi.toUpperCase()+" DADO DE ALTA EN "+f_alta.getTime().getDate()+"/"+f_alta.getTime().getMonth()+"/"+(f_alta.getTime().getYear()+1900));
 		interfaz.pinta_raya();
 	}
 	

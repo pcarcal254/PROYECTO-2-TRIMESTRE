@@ -103,7 +103,7 @@ public class Persona implements Serializable{
 	
 	public void fichaPersona() {
 		interfaz.pinta_raya();
-		System.out.println("DNI: "+this.dni.toUpperCase()+" NOMBRE: "+this.nom.toUpperCase()+" APELLIDO 1: "+this.ape1.toUpperCase()+" APELLIDO 2: "+this.ape2.toUpperCase()+" FECHA DE NACIMIENTO: "+this.f_nac.toString());
+		System.out.println("DNI: "+this.dni.toUpperCase()+" NOMBRE: "+this.nom.toUpperCase()+" APELLIDO 1: "+this.ape1.toUpperCase()+" APELLIDO 2: "+this.ape2.toUpperCase()+" FECHA DE NACIMIENTO: "+f_nac.getTime().getDate()+"/"+f_nac.getTime().getMonth()+"/"+(f_nac.getTime().getYear()+1900));
 	}
 	
 	public int compareTo(Persona p) {

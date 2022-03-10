@@ -83,8 +83,8 @@ public class Alquiler implements Serializable{
 	
 	public void fichaAlquiler() {
 		interfaz.pinta_raya();
-		System.out.println("EL VEHICULO CON MATRICULA "+matricula.toUpperCase()+" HA SIDO ALQUILADO EN LA FECHA "+f_fin.getTime()+" "+
-				" Y SERA DEVUELTO EN LA FECHA PREVISTA "+f_fin.getTime());
+		System.out.println("EL VEHICULO CON MATRICULA "+matricula.toUpperCase()+" HA SIDO ALQUILADO EN LA FECHA "+f_inicio.getTime().getDate()+"/"+f_inicio.getTime().getMonth()+"/"+(f_inicio.getTime().getYear()+1900)+" "+
+				" Y SERA DEVUELTO EN LA FECHA PREVISTA "+f_fin.getTime().getDate()+"/"+f_fin.getTime().getMonth()+"/"+(f_fin.getTime().getYear()+1900));
 		System.out.println("HA SIDO ALQUILADO POR EL EMPLEADO "+nom_emple.toUpperCase()+" EN LA OFICINA "+cod_ofi_dev.toUpperCase());
 		System.out.println("CON UN PRECIO TOTAL DE ALQUILER DE "+precio_final+"€");
 		interfaz.pinta_raya();

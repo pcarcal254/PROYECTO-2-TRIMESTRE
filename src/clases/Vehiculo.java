@@ -121,7 +121,7 @@ public class Vehiculo implements Serializable{
 	
 	public void fichaVehiculo() {
 		interfaz.pinta_raya();
-		System.out.println("VEHICULO CON MATRICULA: "+this.matricula+" MARCA: "+this.marca+" SE ENCUENTRA EN LA OFICINA: "+this.ubi_nom_ofi);
+		System.out.println("VEHICULO CON MATRICULA: "+this.matricula.toUpperCase()+" MARCA: "+this.marca.toUpperCase()+" SE ENCUENTRA EN LA OFICINA: "+this.ubi_nom_ofi.toUpperCase());
 	}
 	
 	public int compareTo(Vehiculo v) {

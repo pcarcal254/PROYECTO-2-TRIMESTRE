@@ -29,7 +29,10 @@ import main.main;
 import menus.menu_gestion;
 import menus.menu_modificar_persona;
 import validadores.generales;
-
+/**
+ * RECOGE TODOS LOS METODOS
+ * NECESARIOS PARA QUE EL PROGRAMA FUNCIONE CORRECTAMENTE
+ */
 public class programa {
 	
 //	Scanner leer = new Scanner(System.in);
