@@ -68,7 +68,7 @@ public class interfaz {
 	}
 
 	public static void mostrar_clase_vehiculo(String clase, String matricula) {
-		String texto = "VAS MODIFICAR UN/A "+clase+" CON MATRICULA "+matricula;
+		String texto = "VAS MODIFICAR UN/A "+clase.toUpperCase()+" CON MATRICULA "+matricula;
 		System.out.println(texto);
 		subrayaTexto(texto.length(),"*");
 	}

@@ -27,11 +27,11 @@ public class menu_modificar_persona {
 		opcionesvalidas.add("MODIFICAR APELLIDO 2");
 		opcionesvalidas.add("MODIFICAR FECHA NACIMIENTO");
 		
-		if (clase_final.equalsIgnoreCase("cliente")) {
+		if (clase_final.equalsIgnoreCase("CLASES.CLIENTE")) {
 			opcionesvalidas.add("MODIFICAR CARNET CONDUCIR");
 			opcionesvalidas.add("MODIFICAR TARJETA DE CLIENTE");
 			iscliente = true;
-		} else if (clase_final.equalsIgnoreCase("empleado")) {
+		} else if (clase_final.equalsIgnoreCase("CLASES.EMPLEADO")) {
 			opcionesvalidas.add("MODIFICAR FECHA DE ALTA");
 			opcionesvalidas.add("MODIFICAR NOMBRE OFICINA");
 			isempleado = true;
@@ -45,7 +45,7 @@ public class menu_modificar_persona {
 			indice.add(""+(i+1));
 		}
 		
-		while (posicion != total_opciones-1) {
+		while (posicion != (total_opciones-1)) {
 //			interfaz.mostrarOpcionesMenu(opcionesvalidas, indice);
 //			posicion = comprobarOpcion (indice, interfaz.pedirOpcionMenu());
 			posicion = leer_comprobar_opcion.leer_comprobar_opcion_menu(opcionesvalidas, indice);

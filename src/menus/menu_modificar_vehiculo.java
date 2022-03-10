@@ -38,27 +38,27 @@ public class menu_modificar_vehiculo {
 		opcionesvalidas.add("MODIFICAR CATEGORIA");
 		opcionesvalidas.add("MODIFICAR UBICACION");
 		
-		if (clase_tipo.equalsIgnoreCase("convencional")) {
+		if (clase_tipo.toString().equalsIgnoreCase("CLASES.CONVENCIONAL")) {
 			opcionesvalidas.add("MODIFICAR CONSUMO");
 			opcionesvalidas.add("MODIFICAR POTENCIA");
 			opcionesvalidas.add("MODIFICAR NIVEL EMISIONES");
-			if (clase_final.equalsIgnoreCase("furgoneta")) {
+			if (clase_final.equalsIgnoreCase("CLASES.FURGONETA")) {
 				opcionesvalidas.add("MODIFICAR CAPACIDAD DE CARGA");
 				opcionesvalidas.add("MODIFICAR CARNET REQUERIDO");
 				isfurgoneta = true;
-			} else if (clase_final.equalsIgnoreCase("cocheconv")) {
+			} else if (clase_final.equalsIgnoreCase("CLASES.COCHECONV")) {
 				opcionesvalidas.add("MODIFICAR NUMERO DE PLAZAS");
 				opcionesvalidas.add("MODIFICAR TIPO");
 				iscocheconv = true;
 			}
-		} else if (clase_tipo.equalsIgnoreCase("electrico")) {
+		} else if (clase_tipo.equalsIgnoreCase("CLASES.ELECTRICO")) {
 			opcionesvalidas.add("MODIFICAR AUTONOMIA");
 			opcionesvalidas.add("MODIFICAR TIEMPO DE RECARGA");
-			if (clase_final.equalsIgnoreCase("moto")) {
+			if (clase_final.equalsIgnoreCase("CLASES.MOTO")) {
 				opcionesvalidas.add("MODIFICAR CILINDRADA");
 				opcionesvalidas.add("MODIFICAR CARNET REQUERIDO");
 				ismoto = true;
-			} else if (clase_final.equalsIgnoreCase("cocheelec")) {
+			} else if (clase_final.equalsIgnoreCase("CLASES.COCHEELEC")) {
 				opcionesvalidas.add("MODIFICAR NUMERO DE PLAZAS");
 				opcionesvalidas.add("MODIFICAR TIPO");
 				iscocheelec = true;
@@ -74,7 +74,7 @@ public class menu_modificar_vehiculo {
 			indice.add(""+(i+1));
 		}
 		
-		while (posicion != total_opciones) {
+		while (posicion != (total_opciones-1)) {
 //			interfaz.mostrarOpcionesMenu(opcionesvalidas, indice);
 //			posicion = comprobarOpcion (indice, interfaz.pedirOpcionMenu());
 			posicion = leer_comprobar_opcion.leer_comprobar_opcion_menu(opcionesvalidas, indice);
