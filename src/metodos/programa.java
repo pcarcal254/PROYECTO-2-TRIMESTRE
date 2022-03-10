@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
@@ -36,6 +37,7 @@ public class programa {
 	private static ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 	private static ArrayList<Empleado> empleados = new ArrayList<Empleado>();
 	private static ArrayList<Oficina> oficinas = new ArrayList<Oficina>();
+	private static ArrayList<Alquiler> alquileres = new ArrayList<Alquiler>();
 	
 	//COMPROBACION EMPRESA CREADA
 	public static boolean comprobacion_fichero() {
@@ -380,10 +382,30 @@ public class programa {
 		precio = precio_dias_totales + (precio_dias_totales*(porcentaje_categoria/100));
 		if (aeropuerto_ofi) {
 			precio = precio + (precio*0.1);
-
 		}
+		return precio;
 	}
+	
+	public static int daysBetween(Date d1, Date d2) {
+	    return (int) ((d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
+	  }
 
+	public static void devolver_vehiculo() {
+		int num_total_alquileres = alquileres.size();
+		interfaz.muestra_titulo_alquileres_anadidos(num_total_alquileres);
+		String matricula = interfaz.muestra_pedir_matricula_alquiler();
+		
+		int contador = 0;
+		for (Alquiler alq : alquileres) {
+			if (alq.getMatricula().equalsIgnoreCase(matricula)) {
+				alquileres.remove(contador);
+				interfaz.mostrar_alquiler_devuelto(matricula);
+			}
+			contador++;
+		}
+		if (contador == (num_total_alquileres-1)){
+			interfaz.error_encontrar_alquiler(matricula);
+		}
 	
 	
 }

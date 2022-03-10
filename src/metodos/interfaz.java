@@ -231,5 +231,9 @@ public class interfaz {
 		}
 		System.out.println();
 	}
+
+	public static void alquiler_realizado() {
+		System.out.println("ALQUILER REALIZADO CON EXITO");
+	}
 	
 }

@@ -20,15 +20,17 @@ public class Empresa implements Serializable{
 	private ArrayList<Empleado> plantilla_emple;
 	private ArrayList<Oficina> lista_oficinas;
 	private ArrayList<Vehiculo> lista_vehiculos;
+	private ArrayList<Alquiler> lista_alquileres;
 	
 	public Empresa(String nom_empresa, ArrayList<Cliente> lista_clientes, ArrayList<Empleado> plantilla_emple,
-			ArrayList<Oficina> lista_oficinas, ArrayList<Vehiculo> lista_vehiculos) {
+			ArrayList<Oficina> lista_oficinas, ArrayList<Vehiculo> lista_vehiculos, ArrayList<Alquiler> lista_alquileres) {
 		super();
 		this.nom_empresa = nom_empresa;
 		this.lista_clientes = lista_clientes;
 		this.plantilla_emple = plantilla_emple;
 		this.lista_oficinas = lista_oficinas;
 		this.lista_vehiculos = lista_vehiculos;
+		this.lista_alquileres = lista_alquileres;
 	}
 	
 	public Empresa(String nom_empresa) {
@@ -37,6 +39,7 @@ public class Empresa implements Serializable{
 		plantilla_emple = new ArrayList<Empleado>();
 		lista_oficinas = new ArrayList<Oficina>();
 		lista_vehiculos = new ArrayList<Vehiculo>();
+		lista_alquileres = new ArrayList<Alquiler>();
 	}
 	
 	public String getNom_empresa() {
@@ -89,6 +92,10 @@ public class Empresa implements Serializable{
 	
 	public void anade_oficina(Oficina o) {
 		lista_oficinas.add(o);
+	}
+	
+	public void anade_alquiler(Alquiler a) {
+		lista_alquileres.add(a);
 	}
 	
 	public static Empresa leer_crear_empresa(boolean primera_vez) {
