@@ -36,7 +36,13 @@ import validadores.generales;
 public class programa {
 	
 //	Scanner leer = new Scanner(System.in);
-	
+	/**
+	 * VEHICULOS -> ARRAY QUE CONTIENE LOS VEHICULOS DE LA EMPRESA
+	 * CLIENTES -> ARRAY QUE CONTIENE LOS CLIENTES DE LA EMPRESA
+	 * EMPLEADOS -> ARRAY QUE CONTIENE LOS EMPLEADOS DE LA EMPRESA
+	 * OFICINAS -> ARRAY QUE CONTIENE LAS OFICINAS DE LA EMPRESA
+	 * ALQUILERES -> ARRAY QUE CONTIENE LOS ALQUILERES DE LA EMPRESA
+	 */
 	private static ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
 	private static ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 	private static ArrayList<Empleado> empleados = new ArrayList<Empleado>();

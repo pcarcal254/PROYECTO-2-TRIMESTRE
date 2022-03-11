@@ -22,6 +22,11 @@ public class interfaz {
 		subrayaTexto(bienvenida.length(),"*");
 	}
 
+	/**
+	 * METODO QUE SUBRAYA UN TEXTO PASADO CON EL SIMBOLO QUE ELIGA EL USUARIO
+	 * @param cantidad -> LA LONGITUD DEL TEXTO PASADO
+	 * @param simbolo -> SIMBOLO CON EL QUE SUBRAYA EL TEXTO PASADO
+	 */
 	public static void subrayaTexto(int cantidad,String simbolo) {
 		for (int i=0; i<cantidad; i++) {
 			System.out.print(simbolo);
@@ -236,6 +241,9 @@ public class interfaz {
 		subrayaTexto(texto.length(),"*");
 	}
 
+	/**
+	 * PINTA UNA RAYA CON EL SIMBOLO QUE ELIGE EL USUARIO PERO CON LA LONGITUD ESTATICA
+	 */
 	public static void pinta_raya() {
 		for (int i=0; i<100; i++) {
 			System.out.print("*");
