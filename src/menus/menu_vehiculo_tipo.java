@@ -51,7 +51,6 @@ public class menu_vehiculo_tipo {
 		case 1:
 			//ELECTRICO
 			menu_vehiculo_tipo_elec.construirMenuVehiculoTipoElec();
-			interfaz.continuarPregunta();
 			break;
 		case 2:
 			//VOLVER

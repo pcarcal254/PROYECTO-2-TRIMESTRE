@@ -79,7 +79,7 @@ public class interfaz {
 	}
 	
 	public static int mostrar_elimina_vehiculo(String clase, String matricula) {
-		String texto = "VAS A ELIMINAR UN/A "+clase+" CON MATRICULA "+matricula;
+		String texto = "VAS A ELIMINAR UN/A "+clase.toUpperCase()+" CON MATRICULA "+matricula;
 		System.out.println(texto);
 		subrayaTexto(texto.length(),"*");
 		System.out.println("¿ESTÁ SEGURO?");
