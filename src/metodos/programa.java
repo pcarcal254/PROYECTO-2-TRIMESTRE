@@ -381,13 +381,13 @@ public class programa {
 		double precio=0;
 		int dias_totales = daysBetween(f_inicio.getTime(), f_fin.getTime());
 		double precio_dias_totales = 0;
-		if (tipo_vehiculo.equalsIgnoreCase("moto")) {
+		if (tipo_vehiculo.equalsIgnoreCase("clases.moto")) {
 			precio_dias_totales = (10*dias_totales)+((10*dias_totales)*0.15);
-		} else if (tipo_vehiculo.equalsIgnoreCase("cocheelec")) {
+		} else if (tipo_vehiculo.equalsIgnoreCase("clases.cocheelec")) {
 			precio_dias_totales = (50*dias_totales)+((10*dias_totales)*0.15);
-		} else if (tipo_vehiculo.equalsIgnoreCase("furgoneta")) {
+		} else if (tipo_vehiculo.equalsIgnoreCase("clases.furgoneta")) {
 			precio_dias_totales = (70*dias_totales);
-		} else if (tipo_vehiculo.equalsIgnoreCase("cocheconv")) {
+		} else if (tipo_vehiculo.equalsIgnoreCase("clases.cocheconv")) {
 			precio_dias_totales = (50*dias_totales);
 		}
 		precio = precio_dias_totales + (precio_dias_totales*(porcentaje_categoria/100));
